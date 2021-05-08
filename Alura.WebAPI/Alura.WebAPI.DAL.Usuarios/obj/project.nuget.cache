@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KSqpY6RUdidCWwsE/RqxYN9m8bfZlHbdwP+6nFi3+s7OpAuXHGyLiBmLHmsQSRPCJAma1IWQOGNVUAt6hLtfyQ==",
+  "dgSpecHash": "h0UTi8S2D3a4hKmAgrtJzitHpG47zM750/tWhXn6+2RkVIDj0B8+9md8Kg9Nl9nRHqaFGLPKZ2EE4vZDoiuklA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Usuarios\\Alura.WebAPI.DAL.Usuarios.csproj",
+  "projectFilePath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Usuarios\\Alura.WebAPI.DAL.Usuarios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.1.0\\microsoft.aspnetcore.authentication.2.1.0.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.0\\microsoft.aspnetcore.authentication.abstractions.2.1.0.nupkg.sha512",

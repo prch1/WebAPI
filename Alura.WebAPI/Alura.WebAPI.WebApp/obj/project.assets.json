@@ -12672,11 +12672,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\Alura.WebAPI.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\Alura.WebAPI.WebApp.csproj",
       "projectName": "Alura.WebAPI.WebApp",
-      "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\Alura.WebAPI.WebApp.csproj",
+      "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\Alura.WebAPI.WebApp.csproj",
       "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\obj\\",
+      "outputPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -12698,17 +12698,17 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "projectReferences": {
-            "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj": {
-              "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj"
+            "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj": {
+              "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Livros\\Alura.WebAPI.DAL.Livros.csproj"
             },
-            "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Usuarios\\Alura.WebAPI.DAL.Usuarios.csproj": {
-              "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Usuarios\\Alura.WebAPI.DAL.Usuarios.csproj"
+            "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Usuarios\\Alura.WebAPI.DAL.Usuarios.csproj": {
+              "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.DAL.Usuarios\\Alura.WebAPI.DAL.Usuarios.csproj"
             },
-            "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj": {
-              "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj"
+            "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj": {
+              "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj"
             },
-            "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj": {
-              "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj"
+            "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj": {
+              "projectPath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Seguranca\\Alura.WebAPI.Seguranca.csproj"
             }
           }
         }

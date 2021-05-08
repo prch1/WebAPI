@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K76drDCGLUJLtrt/0ZOCjEEgyMwZC1I830fVU3xQVy8tEUxkjNHfFCFfwiyckPnk6WcFqeiJYRDdLCBAGjcCMQ==",
+  "dgSpecHash": "EcD6mZM8mGauV6AcdvW1sFrp54Xpr0Ffm0bkVD27NM03hgwBZotjt0s/1/DUOsI32FZcjzZiJBnVW1W2P6QROQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj",
+  "projectFilePath": "C:\\Users\\paulo\\Documents\\Alura-Estudos\\WebAPI\\WebAPI\\Alura.WebAPI\\Alura.WebAPI.Model\\Alura.WebAPI.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\1.1.1\\microsoft.aspnetcore.hosting.abstractions.1.1.1.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\1.1.1\\microsoft.aspnetcore.hosting.server.abstractions.1.1.1.nupkg.sha512",
