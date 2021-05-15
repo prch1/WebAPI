@@ -11,7 +11,7 @@ namespace Alura.WebAPI.WebApp.Formatters
 {
     public class LivroCsvFormatter : TextOutputFormatter
     {
-        
+
         public LivroCsvFormatter()
         {
             var textCsvMediaType = MediaTypeHeaderValue.Parse("text/csv");
@@ -19,6 +19,7 @@ namespace Alura.WebAPI.WebApp.Formatters
             SupportedMediaTypes.Add(textCsvMediaType);
             SupportedMediaTypes.Add(appCsvMediaType);
             SupportedEncodings.Add(Encoding.UTF8);
+        }
         
 
         protected override bool CanWriteType(Type type)
