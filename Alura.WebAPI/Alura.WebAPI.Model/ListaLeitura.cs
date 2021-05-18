@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Serialization;
 
 namespace Alura.ListaLeitura.Modelos
 {
@@ -35,6 +36,5 @@ namespace Alura.ListaLeitura.Modelos
     {
         public string Tipo { get; set; }
         public IEnumerable<LivroApi> Livros { get; set; }
-       
     }
 }

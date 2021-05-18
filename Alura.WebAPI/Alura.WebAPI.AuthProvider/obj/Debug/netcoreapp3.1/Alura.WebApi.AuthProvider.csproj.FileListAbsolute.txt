@@ -1,5 +1,0 @@
-C:\Users\paulo\Documents\Alura-Estudos\WebAPI\WebAPI\Alura.WebAPI\Alura.WebApi.AuthProvider\obj\Debug\netcoreapp3.1\Alura.WebApi.AuthProvider.csprojAssemblyReference.cache
-C:\Users\paulo\Documents\Alura-Estudos\WebAPI\WebAPI\Alura.WebAPI\Alura.WebApi.AuthProvider\obj\Debug\netcoreapp3.1\Alura.WebApi.AuthProvider.AssemblyInfoInputs.cache
-C:\Users\paulo\Documents\Alura-Estudos\WebAPI\WebAPI\Alura.WebAPI\Alura.WebApi.AuthProvider\obj\Debug\netcoreapp3.1\Alura.WebApi.AuthProvider.AssemblyInfo.cs
-C:\Users\paulo\Documents\Alura-Estudos\WebAPI\WebAPI\Alura.WebAPI\Alura.WebApi.AuthProvider\obj\Debug\netcoreapp3.1\Alura.WebApi.AuthProvider.csproj.CoreCompileInputs.cache
-C:\Users\paulo\Documents\Alura-Estudos\WebAPI\WebAPI\Alura.WebAPI\Alura.WebApi.AuthProvider\obj\Debug\netcoreapp3.1\Alura.WebApi.AuthProvider.MvcApplicationPartsAssemblyInfo.cache

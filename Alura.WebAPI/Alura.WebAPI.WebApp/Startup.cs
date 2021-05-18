@@ -47,10 +47,8 @@ namespace Alura.ListaLeitura.WebApp
             services.AddTransient<IRepository<Livro>, RepositorioBaseEF<Livro>>();
 
             services.AddMvc(options => {
-                     options.OutputFormatters.Add(new LivroCsvFormatter());
-                                       }).AddXmlSerializerFormatters();
-
-
+                options.OutputFormatters.Add(new LivroCsvFormatter());
+            }).AddXmlSerializerFormatters();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

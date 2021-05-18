@@ -20,33 +20,27 @@ namespace Alura.WebAPI.WebApp.Formatters
             SupportedMediaTypes.Add(appCsvMediaType);
             SupportedEncodings.Add(Encoding.UTF8);
         }
-        
 
         protected override bool CanWriteType(Type type)
         {
             return type == typeof(LivroApi);
         }
 
-
         public override Task WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
         {
-            var livrosEmCsv = "";
+            var livroEmCsv = "";
 
-            if(context.Object is LivroApi)
+            if (context.Object is LivroApi)
             {
                 var livro = context.Object as LivroApi;
 
-                livrosEmCsv = $"{livro.Titulo};" +
-                              $"{livro.Subtitulo};" +
-                              $"{livro.Autor};" +
-                              $"{livro.Lista}";
+                livroEmCsv = $"{livro.Titulo};{livro.Subtitulo};{livro.Autor};{livro.Lista}";
             }
 
             using (var escritor = context.WriterFactory(context.HttpContext.Response.Body, selectedEncoding))
             {
-                return escritor.WriteLineAsync(livrosEmCsv);
-            }//escritor close
-
+                return escritor.WriteAsync(livroEmCsv);
+            } //escritor.Close()
         }
     }
 }

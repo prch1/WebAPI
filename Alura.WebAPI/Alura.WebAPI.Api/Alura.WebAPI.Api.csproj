@@ -10,13 +10,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Alura.WebAPI.DAL.Livros\Alura.WebAPI.DAL.Livros.csproj" />
     <ProjectReference Include="..\Alura.WebAPI.Model\Alura.WebAPI.Model.csproj" />
-    <ProjectReference Include="..\Alura.WebAPI.Seguranca\Alura.WebAPI.Seguranca.csproj" />
   </ItemGroup>
 
 </Project>

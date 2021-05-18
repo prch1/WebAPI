@@ -197,16 +197,6 @@
               "target": "Package",
               "version": "[2.1.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.1.1, )"
-            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -271,7 +261,7 @@
           "dependencies": {
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[5.2.4, )"
+              "version": "[6.11.0, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -372,7 +362,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.11.0, )"
+              "version": "[5.2.4, )"
             }
           },
           "imports": [

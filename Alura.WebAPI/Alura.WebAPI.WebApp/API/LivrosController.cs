@@ -1,13 +1,14 @@
-﻿using Alura.ListaLeitura.Modelos;
-using Alura.ListaLeitura.Persistencia;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Alura.ListaLeitura.Modelos;
+using Alura.ListaLeitura.Persistencia;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 
-namespace Alura.WebAPI.WebApp.API
+namespace Alura.WebAPI.WebApp.Api
 {
     [Authorize]
     [ApiController]
@@ -24,45 +25,34 @@ namespace Alura.WebAPI.WebApp.API
         [HttpGet]
         public IActionResult ListaDeLivros()
         {
-            var lista = _repo.All.Select(l => l.ToApi()).ToList();    
+            var lista = _repo.All.Select(l => l.ToApi()).ToList();
             return Ok(lista);
         }
-
 
         [HttpGet("{id}")]
         public IActionResult Recuperar(int id)
         {
             var model = _repo.Find(id);
-
             if (model == null)
             {
                 return NotFound();
             }
-
             return Ok(model.ToApi());
         }
-
-
 
         [HttpGet("{id}/capa")]
         public IActionResult ImagemCapa(int id)
         {
             byte[] img = _repo.All
-               .Where(l => l.Id == id)
-               .Select(l => l.ImagemCapa)
-               .FirstOrDefault();
+                .Where(l => l.Id == id)
+                .Select(l => l.ImagemCapa)
+                .FirstOrDefault();
             if (img != null)
             {
                 return File(img, "image/png");
             }
             return File("~/images/capas/capa-vazia.png", "image/png");
-
-
         }
-
-
-
-
 
         [HttpPost]
         public IActionResult Incluir([FromBody] LivroUpload model)
@@ -71,12 +61,11 @@ namespace Alura.WebAPI.WebApp.API
             {
                 var livro = model.ToLivro();
                 _repo.Incluir(livro);
-                var url = Url.Action("Recuperar", new { id = livro.Id });
-                return Created(url, livro); //201
+                var uri = Url.Action("Recuperar", new { id = livro.Id });
+                return Created(uri, livro); //201
             }
             return BadRequest();
         }
-
 
         [HttpPut]
         public IActionResult Alterar([FromBody] LivroUpload model)
@@ -92,11 +81,10 @@ namespace Alura.WebAPI.WebApp.API
                         .FirstOrDefault();
                 }
                 _repo.Alterar(livro);
-                return Ok(); // 200
+                return Ok(); //200
             }
-            return BadRequest(); //400
+            return BadRequest();
         }
-
 
         [HttpDelete("{id}")]
         public IActionResult Remover(int id)
@@ -107,11 +95,7 @@ namespace Alura.WebAPI.WebApp.API
                 return NotFound();
             }
             _repo.Excluir(model);
-
-            return NoContent(); //204
+            return NoContent(); //203
         }
-
-
-
     }
 }

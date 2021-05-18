@@ -1,4 +1,8 @@
-﻿using Alura.ListaLeitura.Api.Formatters;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Alura.ListaLeitura.Api.Formatters;
 using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
 using Microsoft.AspNetCore.Builder;
@@ -8,10 +12,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Alura.WebAPI.Api
 {
@@ -47,14 +47,12 @@ namespace Alura.WebAPI.Api
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("alura-webapi-authenrication-valid")),
+                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("alura-webapi-authentication-valid")),
                     ClockSkew = TimeSpan.FromMinutes(5),
                     ValidIssuer = "Alura.WebApp",
                     ValidAudience = "Postman",
                 };
             });
-
-
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -67,7 +65,6 @@ namespace Alura.WebAPI.Api
             app.UseAuthentication();
 
             app.UseMvc();
-           
         }
     }
 }
