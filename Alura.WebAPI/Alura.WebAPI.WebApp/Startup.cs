@@ -47,8 +47,6 @@ namespace Alura.ListaLeitura.WebApp
             });
 
 
-
-
             services.ConfigureApplicationCookie(options => {
                 options.LoginPath = "/Usuario/Login";
             });
