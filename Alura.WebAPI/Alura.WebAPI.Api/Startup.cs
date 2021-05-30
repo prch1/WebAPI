@@ -55,15 +55,22 @@ namespace Alura.WebAPI.Api
                 };
             });
 
-            services.AddApiVersioning(options =>
-            {
-                options.ApiVersionReader = ApiVersionReader.Combine(
-                      new QueryStringApiVersionReader("api-version"),
-                      new HeaderApiVersionReader("api-version")
-                    );
-            });
+
+            //so na rota
+            services.AddApiVersioning();
 
 
+            /// versionamento hibrido
+            //services.AddApiVersioning(options =>
+            //{
+            //    options.ApiVersionReader = ApiVersionReader.Combine(
+            //          new QueryStringApiVersionReader("api-version"),
+            //          new HeaderApiVersionReader("api-version")
+            //        );
+            //});
+
+
+            ///apenas no cabecalho
             //services.AddApiVersioning(options => {
             //    options.ApiVersionReader = new HeaderApiVersionReader("api-version");
             //});
