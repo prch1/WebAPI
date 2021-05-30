@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Alura.ListaLeitura.Modelos;
+﻿using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Formatters;
+using System.Linq;
 
 namespace Alura.ListaLeitura.Api.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("api/v1.0/[controller]")]
-    public class LivrosController : ControllerBase
+    [Route("api/v2.0/livros")]
+    public class Livros2Controller : ControllerBase
     {
         private readonly IRepository<Livro> _repo;
 
-        public LivrosController(IRepository<Livro> repository)
+        public Livros2Controller(IRepository<Livro> repository)
         {
             _repo = repository;
         }
@@ -37,8 +33,8 @@ namespace Alura.ListaLeitura.Api.Controllers
             {
                 return NotFound();
             }
-             return Ok(model.ToApi());
-           // return Ok(model);
+            //return Ok(model.ToApi());
+             return Ok(model);
         }
 
         [HttpGet("{id}/capa")]
@@ -98,5 +94,6 @@ namespace Alura.ListaLeitura.Api.Controllers
             _repo.Excluir(model);
             return NoContent(); //203
         }
+
     }
 }
