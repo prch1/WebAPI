@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Alura.ListaLeitura.Api.Formatters;
 using Alura.ListaLeitura.Modelos;
 using Alura.ListaLeitura.Persistencia;
+using Alura.WebAPI.Api.FiltrosExceptions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -35,7 +37,13 @@ namespace Alura.WebAPI.Api
 
             services.AddMvc(options => {
                 options.OutputFormatters.Add(new LivroCsvFormatter());
+                options.Filters.Add(typeof(ErrorResponseFilter));
             }).AddXmlSerializerFormatters();
+
+            services.Configure<ApiBehaviorOptions>(options => 
+            {
+                options.SuppressModelStateInvalidFilter = true;     
+            });
 
             services.AddAuthentication(options =>
             {
@@ -58,22 +66,6 @@ namespace Alura.WebAPI.Api
 
             //so na rota
             services.AddApiVersioning();
-
-
-            /// versionamento hibrido
-            //services.AddApiVersioning(options =>
-            //{
-            //    options.ApiVersionReader = ApiVersionReader.Combine(
-            //          new QueryStringApiVersionReader("api-version"),
-            //          new HeaderApiVersionReader("api-version")
-            //        );
-            //});
-
-
-            ///apenas no cabecalho
-            //services.AddApiVersioning(options => {
-            //    options.ApiVersionReader = new HeaderApiVersionReader("api-version");
-            //});
 
         }
 

@@ -66,14 +66,14 @@ namespace Alura.ListaLeitura.Api.Controllers
         [HttpPost]
         public IActionResult Incluir([FromForm] LivroUpload model)
         {
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
                 var livro = model.ToLivro();
-                _repo.Incluir(livro);
+                    _repo.Incluir(livro);                  
                 var uri = Url.Action("Recuperar", new { id = livro.Id });
-                return Created(uri, livro); //201
+                return Created(uri, livro); //201          
             }
-            return BadRequest();
+            return BadRequest(ErrorResponse.FromModelState(ModelState));
         }
 
         [HttpPut]
