@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Alura.WebAPI.Api
 {
@@ -67,6 +68,23 @@ namespace Alura.WebAPI.Api
             //so na rota
             services.AddApiVersioning();
 
+
+            services.AddSwaggerGen(c =>
+           {
+               c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+               {
+                   Title ="Livros API",
+                   Description ="Documentação da API de Livros", Version ="1.0" 
+                           });
+               c.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
+                          { Title = "Livros API", 
+                   Description = "Documentação da API", Version = "2.0"});
+
+               c.EnableAnnotations();
+
+
+           });
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -79,6 +97,14 @@ namespace Alura.WebAPI.Api
             app.UseAuthentication();
 
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "Versão 1.0");
+            c.SwaggerEndpoint("/swagger/v2/swagger.json", "Versão 2.0");
+                                  }); 
+
         }
     }
 }
